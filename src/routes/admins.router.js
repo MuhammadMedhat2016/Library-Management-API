@@ -5,11 +5,6 @@ import lockedForMiddleware from '../middlewares/authorization.middleware.js';
 import { USER_TYPES } from '../schemas/user.schema.js';
 const router = express.Router();
 
-router.post(
-  '/',
-  adminValidationMiddleware,
-  lockedForMiddleware(USER_TYPES.ADMIN),
-  adminController.addAdmin,
-);
+router.post('/', adminValidationMiddleware, adminController.addAdmin);
 
 export default router;
