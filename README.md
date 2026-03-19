@@ -32,13 +32,13 @@ Follow these steps to get your local development environment running.
 ```bash
 git clone [https://github.com/MuhammadMedhat2016/Library-Management-API.git](https://github.com/MuhammadMedhat2016/Library-Management-API.git)
 cd Library-Management-API
-### 2. Clone the Repository
-```bash
-git clone [https://github.com/MuhammadMedhat2016/Library-Management-API.git]
-cd project-repo
+```
 ### 3. Install Dependancies
+```
 npm install
+```
 ### 4. Set up environment variables
+```
 DATABASE_URL="mysql://username:password@host:3306/library"
 DATABASE_HOST=localhost
 DATABASE_USER=username
@@ -47,10 +47,17 @@ DATABASE_NAME=library
 MODE=DEVELOPMENT
 JWT_SECRET=this_is_my_very_long_secret
 JWT_EXPIRES_IN=1d
+```
 ### 5. Initialize Prisma
+```
 npx prisma generate
 npx prisma migrate dev --name init
+```
 ### 6. Start the Server
+```
 npm run start
+```
 ### 7. Import Postman Collection
+```
 import postman collection exported in the project folder to request
+```
